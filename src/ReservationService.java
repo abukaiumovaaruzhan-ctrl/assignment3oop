@@ -43,8 +43,9 @@ public class ReservationService {
 
         int tariffId = 1;
 
-        // 4️⃣ Reservation жасау (ДҰРЫС id-мен )
+        // 4️⃣ Reservation жасау (ДҰРЫС id-мен)
         reservationRepo.create(vehicle.getId(), spot.getId(), tariffId);
+
 
         // 5️⃣ Spot-ты бос емес деп белгілеу
         spotRepo.updateAvailability(spot.getId(), false);

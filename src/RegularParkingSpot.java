@@ -6,4 +6,5 @@ public class RegularParkingSpot extends ParkingSpotType {
     public int getPricePerHour() {
         return 100;
     }
+
 }

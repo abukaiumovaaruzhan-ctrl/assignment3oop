@@ -21,9 +21,6 @@ public class ReservationRepository {
         try (Connection con = db.getConnection();
              PreparedStatement ps = con.prepareStatement(sql)) {
 
-
-
-
             ps.setInt(1, vehicleId);
             ps.setInt(2, spotId);
             ps.setTimestamp(3, Timestamp.valueOf(LocalDateTime.now()));

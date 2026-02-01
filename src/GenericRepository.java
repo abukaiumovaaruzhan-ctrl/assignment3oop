@@ -6,4 +6,5 @@ interface Repository<T> {
     Optional<T> findById(int id);
     List<T> findAll();
     void delete(int id);
+
 }
