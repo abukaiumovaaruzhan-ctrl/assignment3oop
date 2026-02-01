@@ -1,6 +1,6 @@
 package entities;
 
-public class ParkingSpot {
+public abstract class ParkingSpot {
     private int id;
     private boolean available;
 
