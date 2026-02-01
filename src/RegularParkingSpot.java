@@ -1,8 +1,9 @@
 package entities;
 
-public class RegularParkingSpot extends ParkingSpot {
+public class RegularParkingSpot extends ParkingSpotType {
 
-    public RegularParkingSpot(int id) {
-        super(id, true);
+    @Override
+    public int getPricePerHour() {
+        return 100;
     }
 }

@@ -1,11 +1,14 @@
+import entities.ElectricParkingSpot;
+import entities.RegularParkingSpot;
+import entities.ParkingSpotType;
+
 public class ParkingSpotFactory {
 
-    public static entities.VipParkingSpot createSpot(String type, int id) {
-        if (type.equals("VIP")) {
-            return new entities.VipParkingSpot(id);
-        } else if (type.equals("ELECTRIC")) {
-            return new ElectricParkingSpot(id);
+    public static ParkingSpotType create(String type) {
+        if (type.equalsIgnoreCase("electric")) {
+            return new ElectricParkingSpot();
+        } else {
+            return new RegularParkingSpot();
         }
-        return new RegularParkingSpot(id);
     }
 }

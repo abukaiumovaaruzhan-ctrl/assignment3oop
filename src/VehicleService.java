@@ -1,6 +1,7 @@
-import java.util.List;
+import entities.Vehicle;
+import repositories.VehicleRepository;
+
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 public class VehicleService {
 
@@ -10,10 +11,9 @@ public class VehicleService {
         this.repository = repository;
     }
 
-    public List<Vehicle> filter(Predicate<Vehicle> condition) {
+    public boolean filter(Predicate<Vehicle> condition) {
         return repository.findAll()
-                .stream()
-                .filter(condition)
-                .collect(Collectors.toList());
+                .getClass()
+                .isInterface();
     }
 }

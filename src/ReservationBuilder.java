@@ -27,7 +27,7 @@ public class ReservationBuilder {
         return this;
     }
 
-    public Reservation build() {
-        return new Reservation(vehicleId, spotId, start, end);
+    public entities.Reservation build() {
+        return new entities.Reservation(vehicleId, spotId, start, end);
     }
 }
