@@ -22,7 +22,7 @@ public class Main {
                 new ReservationService(spotRepo, reservationRepo, vehicleRepo);
 
         try {
-            // ✅ Vehicle алдын-ала қосу немесе DB-дан алу
+            
             Vehicle vehicle;
             Optional<Vehicle> existing = vehicleRepo.findByPlate("123ABC");
             if (existing.isPresent()) {
@@ -32,7 +32,6 @@ public class Main {
                 vehicleRepo.save(vehicle);
             }
 
-            // ✅ Reservation жасау
             service.reserve(vehicle.getPlate());
 
         } catch (SQLException e) {
