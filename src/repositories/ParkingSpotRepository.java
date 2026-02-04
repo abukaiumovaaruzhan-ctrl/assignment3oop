@@ -13,7 +13,6 @@ public class ParkingSpotRepository {
         this.db = db;
     }
 
-    // ✅ Бос spot табу
     public ParkingSpot findFreeSpot() throws SQLException {
         String sql = "SELECT * FROM parking_spots WHERE available = TRUE LIMIT 1";
         try (PreparedStatement stmt = db.getConnection().prepareStatement(sql)) {
@@ -27,10 +26,10 @@ public class ParkingSpotRepository {
                 );
             }
         }
-        return null; // ешқандай бос spot жоқ
+        return null; 
     }
 
-    // Spot-ты бос емес деп белгілеу
+    
     public void updateAvailability(int spotId, boolean isFree) throws SQLException {
         String sql = "UPDATE parking_spots SET available  = ? WHERE id = ?";
         try (PreparedStatement stmt = db.getConnection().prepareStatement(sql)) {
